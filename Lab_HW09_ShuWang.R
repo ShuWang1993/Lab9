@@ -59,44 +59,44 @@ sort_vec(c(3, 1, 5, 2), ascending = FALSE)
 
 
 ## Question 3:
-N = 1000
+N1 = 1000
 data_series = 0 # original version
-dy1 <- system.time({for (i in 2:N){
+dy1 <- system.time({for (i in 2 : N1){
   data_series[i] = data_series[i-1] + sample(c(-1, 1), 1) }
 })
 
-N = 1000
+N1 = 1000
 data_series = c(NA) # preallocated version
-length(data_series) <- N - 1
-pre1 <- system.time({for (i in 2:N){
+length(data_series) <- N1
+pre1 <- system.time({for (i in 2 : N1){
   data_series[i] = data_series[i-1] + sample(c(-1, 1), 1) }
 })
 
 
-N = 10000
+N2 = 10000
 data_series = 0 # original version
-dy2 <- system.time({for (i in 2:N){
+dy2 <- system.time({for (i in 2 : N2){
   data_series[i] = data_series[i-1] + sample(c(-1, 1), 1) }
 })
 
-N = 10000
+N2 = 10000
 data_series = c(NA) # preallocated version
-length(data_series) <- N - 1
-pre2 <- system.time({for (i in 2:N){
+length(data_series) <- N2
+pre2 <- system.time({for (i in 2 : N2){
   data_series[i] = data_series[i-1] + sample(c(-1, 1), 1) }
 })
 
 
-N = 1000000
+N3 = 1000000
 data_series = 0 # original version
-dy3 <- system.time({for (i in 2:N){
+dy3 <- system.time({for (i in 2 : N3){
   data_series[i] = data_series[i-1] + sample(c(-1, 1), 1) }
 })
 
-N = 1000000
+N3 = 1000000
 data_series = c(NA) # preallocated version
-length(data_series) <- N - 1
-pre3 <- system.time({for (i in 2:N){
+length(data_series) <- N3
+pre3 <- system.time({for (i in 2 : N3){
   data_series[i] = data_series[i-1] + sample(c(-1, 1), 1) }
 })
 
